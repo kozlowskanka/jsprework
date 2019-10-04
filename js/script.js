@@ -75,7 +75,7 @@ function displayResult(){
 	else if (computerMove == playerMove){
     return printMessage('REMIS');
 		
-  } else if (playerMove = 'nieznany ruch'){
+  } else if (playerMove == 'nieznany ruch'){
     return printMessage ('Przeczytaj uważnie reguły gry...')
   }
 	
