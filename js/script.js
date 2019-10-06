@@ -60,15 +60,15 @@ function playGame (playerInput) {
     if(computerMove == 'rock' && playerMove == 'paper'
     || computerMove == 'scissors' && playerMove == 'rock'
     || computerMove == 'paper' && playerMove == 'scissors'){
-      return printMessage('You win!');
+      return printMessage('<span>SCORE:</span> You win!');
     } 
     else if (computerMove == 'rock' && playerMove == 'scissors'
     || computerMove == 'scissors' && playerMove == 'paper'
     || computerMove == 'paper' && playerMove == 'rock'){
-      return printMessage('You loose!');
+      return printMessage('<span>SCORE:</span> You loose!');
     } 
     else if (computerMove == playerMove){
-      return printMessage('It is a draw!');
+      return printMessage('<span>SCORE:</span> It is a draw!');
     } 
     else if (playerMove == 'nieznany ruch'){
       return printMessage ('Przeczytaj uważnie reguły gry...')
@@ -93,3 +93,4 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
+

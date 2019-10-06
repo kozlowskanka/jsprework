@@ -32,8 +32,8 @@ body {
   height: 100vh;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-direction: row;
       flex-direction: row;
 }
@@ -41,6 +41,7 @@ body {
 .btn {
   width: 200px;
   height: 200px;
+  margin: 30px;
 }
 
 button {
@@ -66,9 +67,9 @@ button:hover {
 
 /*Message*/
 .score {
-  background-color: yellow;
   height: 100px;
   width: 100%;
+  background-color: yellow;
   text-align: center;
   color: black;
   position: fixed;
@@ -82,11 +83,28 @@ button:hover {
 }
 
 #messages {
-  color: black;
   font-size: 23px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
+#messages span {
+  color: red;
+}
+
+#result {
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/* Result */
 @media (max-width: 800px) {
   .buttons-wrapper {
     -ms-flex-direction: column;
@@ -97,7 +115,7 @@ button:hover {
   .btn {
     width: 150px;
     height: 150px;
-    margin: 10px;
+    margin: 25px;
   }
   button {
     font-size: 30px;
