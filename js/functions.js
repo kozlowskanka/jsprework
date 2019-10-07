@@ -7,3 +7,14 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+
+function computerResult (){
+	let computerScore = document.getElementById('computerResult');
+	computerScore.innerHTML = ++computerScore.innerHTML;
+
+}
+
+function playerResult (){
+	let playerScore = document.getElementById('playerResult');
+	playerScore.innerHTML = ++playerScore.innerHTML;
+}

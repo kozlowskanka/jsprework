@@ -12,7 +12,7 @@ body {
 .header {
   position: fixed;
   top: 0;
-  height: 100px;
+  height: 140px;
   width: 100%;
   background-color: white;
   color: blue;
@@ -50,8 +50,8 @@ button {
   border: 2px solid white;
   width: 100%;
   height: 100%;
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 22px;
   color: white;
 }
 
@@ -60,26 +60,32 @@ button:hover {
   text-decoration: none;
   width: 100%;
   height: 100%;
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   color: black;
   cursor: pointer;
 }
 
 /*Message*/
+.footer {
+  height: 140px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+}
+
 .score {
   height: 100px;
   width: 100%;
   background-color: yellow;
   text-align: center;
   color: black;
-  position: fixed;
-  bottom: 0;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 #messages {
@@ -94,12 +100,14 @@ button:hover {
 #result {
   height: 40px;
   width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: black;
   color: white;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -118,7 +126,7 @@ button:hover {
     margin: 25px;
   }
   button {
-    font-size: 30px;
+    font-size: 16px;
   }
   #messages {
     font-size: 17px;

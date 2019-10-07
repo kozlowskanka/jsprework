@@ -23,31 +23,7 @@ function playGame (playerInput) {
 
   console.log('Komputer pokazał: ' + computerMove);
 
-  // printMessage('Mój ruch to: ' + computerMove);
-
-  /* if(randomNumber == 1) {
-      computerMove = 'rock';
-  }  else if (randomNumber == 2) {
-      computerMove = 'paper';
-  }  else if (randomNumber == 3) {
-      computerMove = 'scissors';
-  } */
-
-  // let playerInput = prompt('Wybierz swój ruch! 1: rock, 2: paper, 3: scissors.');
-
-  // console.log('Gracz wpisał: ' + playerInput);
-
   let playerMove = getMoveName(playerInput);
-
-  // printMessage('Twój ruch to: ' + playerMove);
-
-  /* if(playerInput == '1'){
-      playerMove = 'rock';
-  }  else if (playerInput == 2) {
-      playerMove = 'paper';
-  }  else if (playerInput == 3) {
-      playerMove = 'scissors';
-  } */
 
   console.log('Gracz pokazał: ' + playerMove);
 
@@ -57,15 +33,17 @@ function playGame (playerInput) {
     console.log('moves:', computerMove, playerMove);
     printMessage('COMPUTER:' + computerMove + ' YOU:' + playerMove);
 
-    if(computerMove == 'rock' && playerMove == 'paper'
+    if (computerMove == 'rock' && playerMove == 'paper'
     || computerMove == 'scissors' && playerMove == 'rock'
     || computerMove == 'paper' && playerMove == 'scissors'){
-      return printMessage('<span>SCORE:</span> You win!');
+      printMessage('<span>SCORE:</span> You win!');
+      playerResult();
     } 
     else if (computerMove == 'rock' && playerMove == 'scissors'
     || computerMove == 'scissors' && playerMove == 'paper'
     || computerMove == 'paper' && playerMove == 'rock'){
-      return printMessage('<span>SCORE:</span> You loose!');
+      printMessage('<span>SCORE:</span> You loose!');
+      computerResult();
     } 
     else if (computerMove == playerMove){
       return printMessage('<span>SCORE:</span> It is a draw!');
