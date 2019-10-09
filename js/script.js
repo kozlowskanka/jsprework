@@ -5,20 +5,14 @@ function playGame (playerInput) {
   }
 
   clearMessages();
-
-  const printMessage = function(msg){
-    var div = document.createElement('div');
-    div.innerHTML = msg;
-    document.getElementById('messages').appendChild(div);
-  }
-
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let computerMove = getMoveName(randomNumber);
+  const computerMove = getMoveName(randomNumber);
   console.log('Komputer pokazał: ' + computerMove);
 
-  let playerMove = getMoveName(playerInput);
+  const playerMove = getMoveName(playerInput);
   console.log('Gracz pokazał: ' + playerMove);
 
   function getMoveName(MoveId){
@@ -31,9 +25,9 @@ function playGame (playerInput) {
     } else {
         printMessage('Nie znam ruchu o id ' + MoveId + '.');
         return 'nieznany ruch';
+      }
     }
-  }
-
+  
   const displayResult = function(computerMove, playerMove){
     const computerResult = function (){
       let computerScore = document.getElementById('computerResult');
@@ -44,6 +38,11 @@ function playGame (playerInput) {
       playerScore.innerHTML = ++playerScore.innerHTML;
     }
     
+    const printMessage = function(msg){
+      const div = document.createElement('div');
+      div.innerHTML = msg;
+      document.getElementById('messages').appendChild(div);
+    }
     console.log('Wywołanie funkcji rozstrzygnięcia');	
     console.log('moves:', computerMove, playerMove);
     printMessage('COMPUTER:' + computerMove + ' YOU:' + playerMove);
@@ -70,12 +69,10 @@ function playGame (playerInput) {
       printMessage('Tym razem przegrywasz :(');
     }
   }
-
   displayResult(computerMove, playerMove);
-
 }
 
-const playerClick = function() {
+function playerClick() {
   document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1);
   });
